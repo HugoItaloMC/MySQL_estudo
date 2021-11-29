@@ -1,3 +1,40 @@
+
+#Visualizacão de dados em grafico com python
+
+# importando biblioteca
+
+import matplotlib.pyplot as plt
+
+x1 = [1, 3, 5, 7, 9, 11]
+y1 = [5 , 7, 2, 3, 1, 8]
+
+x2 = [2, 4, 5, 6, 8, 10]
+y2 = [11, 2, 6, 7, 1, 3]
+
+# Legendas
+
+plt.title("Meu Gráfico, teste : ")
+
+plt.xlabel("Eixo X")
+
+plt.ylabel("Eixo Y")
+
+
+
+#plt.plot(x, y)  # Grafico linear
+
+#plt.bar(x1, y1, label = "Grupo 1")  # Gráfico de barras
+#plt.bar(x2, y2, label = "Grupo 2")
+
+plt.scatter(x1, y1, label = "Grupo 1", color = "purple", marker = ",", s = 20.25)  # Atributo ' s ' refere-se ao tamanho da marcacão
+plt.scatter(x2, y2, label = "Grupo 2", color = "green", marker = "_")
+plt.plot(x1, y1, color = "black", linestyle="--")  # Ligar os pontos com linhas
+plt.plot(x2, y2, color = "black", linestyle = "-.")
+plt.legend()  # ' Commitando ' o bloco acima pro gráfico rodar
+
+plt.show()  # Mostra gráfico
+
+# MArcadores
 """
 Markers
 
@@ -76,7 +113,7 @@ character       description
 
 =======================================||
 
-Colors :
+Colors : 
 
 Atributo color=""
 
@@ -101,42 +138,3 @@ character   color
 
 """
 
-
-#Visualizacão de dados em grafico com python
-
-# importando biblioteca
-
-import matplotlib.pyplot as plt
-
-x1 = [1, 3, 5, 7, 9, 11]
-y1 = [5 , 7, 2, 3, 1, 8]
-
-x2 = [2, 4, 5, 6, 8, 10]
-y2 = [11, 2, 6, 7, 1, 3]
-
-# Legendas
-
-plt.title("Meu Gráfico, teste : ")
-
-plt.xlabel("Eixo X")
-
-plt.ylabel("Eixo Y")
-
-
-
-#plt.plot(x, y)  # Grafico linear
-
-#plt.bar(x1, y1, label = "Grupo 1")  # Gráfico de barras
-#plt.bar(x2, y2, label = "Grupo 2")
-
-plt.scatter(x1, y1, label = "Grupo 1", color = "purple", marker = ",", s = 20.25)  # Atributo ' s ' refere-se ao tamanho da marcacão
-plt.scatter(x2, y2, label = "Grupo 2", color = "green", marker = "_")
-plt.plot(x1, y1, color = "black", linestyle="--")  # Ligar os pontos com linhas
-plt.plot(x2, y2, color = "black", linestyle = "-.")
-plt.legend()  # ' Commitando ' o bloco acima pro gráfico rodar
-
-#plt.show()  # Mostra gráfico
-plt.savefig("figura1.png", dpi = 300)  # Atributo ' dpi ' refere-se ao tamanho da resoulucão da imagem, podemos salvar com a extensão ' .pdf '
-
-
-# OBS : A imagem do gráfico  será salva dentro da pasta que se encontra o arquivo python
