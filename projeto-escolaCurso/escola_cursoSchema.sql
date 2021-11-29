@@ -105,3 +105,4 @@ VALUES
 (DEFAULT,7,'Prova 2',21.0),
 (DEFAULT,4,'Exercicio 3',19.0),
 (DEFAULT,8,'Exercicio 3',22.6);
+
