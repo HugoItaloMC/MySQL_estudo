@@ -47,13 +47,13 @@ def insert(values, table, fields=None):
     con.commit()
 
 
-values = [
-    "DEFAULT, 'Erico Rocha', '1993-08-11', 'Av Regiao dos Lagos, 887', 'Cristal', 'ES', '12345678934'",
-    "DEFAULT, 'Maria Joana', '1965-11-04', 'Rua Sao Cristovao Verde, 655', 'Guarulhos', 'SP', '5123456699'"
-]
+#values = [
+#   "DEFAULT, 'Erico Rocha', '1993-08-11', 'Av Regiao dos Lagos, 887', 'Cristal', 'ES', '12345678934'",
+#    "DEFAULT, 'Maria Joana', '1965-11-04', 'Rua Sao Cristovao Verde, 655', 'Guarulhos', 'SP', '5123456699'"
+#]
 # Entrada de novos dados
 
-insert(values, "alunos")
+#insert(values, "alunos")
 
 # Saída da tabela apóes as entradas de novos dados
 
@@ -70,6 +70,21 @@ def update(sets, table, where=None):
     con.commit()
 
 
-update({"nome":"Jose Faria", "cidade":"Goias"}, "alunos", "id_alunos = 8")
+#update({"nome":"Jose Faria", "cidade":"Goias"}, "alunos", "id_alunos = 8")
 print(select("*", "alunos", "id_alunos = 8"))
+print(select("*", "alunos"))
+
+
+# Delete
+
+def delete(table, where):
+    global c, con
+
+    query = "DELETE FROM " + table + " WHERE "  + where
+
+    c.execute(query)
+    con.commit()
+
+# Aplicando o delete
+delete("alunos", "id_alunos = 8")
 print(select("*", "alunos"))
